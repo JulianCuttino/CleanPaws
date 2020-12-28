@@ -1,30 +1,25 @@
 <?php
 include_once 'dbconnect.php';
-    $user = $_POST['username'];
-    $pass = $_POST['password'];
+    if (isset($_POST['username'])){
+        function validate($data){
+            $data = trim($data);
+            $data = stripslashes($data);
+            $data = htmlspecialchars($data);
+            return $data;
+        }
+    $user = validate($_POST['username']);
+    $pass = validate($_POST['password']);
+
     $sql = "SELECT * FROM admins WHERE Name = '$user' and Password = '$pass'";
     $result = $conn->query($sql);
-    if ($result->num_rows === 1) {
-        session_start();
-        $row = $result->fetch_assoc();
-       unset($_SESSION['row']);
-       
-       if (!isset($_SESSION['row'])) {
-        $_SESSION['row'] = $row;
-        header('location:index.php');
-       }
-       } else {
-           echo"
-           <script> alert('Incorrect email or password. Try again');
-           </script>";
-        }
-       $conn->close();
+    
+    }
 
 ?>
 <!DOCTYPE html>
 <html>
 <h2>Login</h2>
-<form method='post' action='#'>
+<form method='post' action='login.php'>
 <div class='imgcontainer'>
     <img src='images\logo.png'>
 </div>
