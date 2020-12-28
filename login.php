@@ -24,6 +24,7 @@ include_once 'dbconnect.php';
        } else {
            echo"
            <script> alert('Incorrect email or password. Try again');
+           window.location='index.php';
            </script>";
         }
        $conn->close();
