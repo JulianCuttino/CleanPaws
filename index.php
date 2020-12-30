@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<link href='Style/default.css' rel='stylesheet' type='text/css' media='all'>
 <h2>Login</h2>
 <form method='post' action='login.php'>
 <div class='imgcontainer'>
