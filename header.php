@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php include_once 'isConnected.php';?>
 <html>
+<link href='Style/default.css' rel='stylesheet' type='text/css' media='all'>
 <body>
     <nav>
     <h2>Clean Paws and All</h2>
