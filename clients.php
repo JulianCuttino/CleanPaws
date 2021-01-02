@@ -6,6 +6,10 @@ include_once 'header.php';
 <body>
 
 <h1>Clients</h1>
+<div>
+<button onclick="location.href='Newclient.php';">Add New Client</button>
+</div>
+
 <div class="scrollable">
 <table>
 	<thead>
