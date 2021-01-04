@@ -18,15 +18,16 @@ include_once 'header.php';
 	<th>Address</th>
 	<th>Phone Number</th>
 	<th>Notes</th>
+	<th>Dog</th>
 	</tr>
 	<?php
 	include_once 'dbconnect.php';
-	$sql = "SELECT firstname,lastname,address,phone,notes from clients";
+	$sql = "SELECT ClientID,firstname,lastname,address,phone,notes from clients";
 	$result = $conn->query($sql);
 	if ($result->num_rows>0){
 				while ($row = $result-> fetch_assoc()){
-          $User = $row['UserID'];
-					echo"<tr><td>".$row['firstname']." ". $row['lastname']."</td><td>".$row['address']."</td><td>".$row['phone']."</td><td>".$row['notes']."</td></tr>";
+				  $User = $row['ClientID'];
+					echo"<tr><td>".$row['firstname']." ". $row['lastname']."</td><td>".$row['address']."</td><td>".$row['phone']."</td><td>".$row['notes']."</td><td><a href='dog.php?u=$User'>dog</a></td></tr>";
 					}
 				echo "</table>";
 				}
