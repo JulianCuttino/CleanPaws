@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <?php include_once 'isConnected.php';?>
 <html>
-<link href='Style/default.css' rel='stylesheet' type='text/css' media='all'>
-<body>
-    <nav>
+<link href='Style/style.css' rel='stylesheet' type='text/css' media='all'>
+<body id="header">
+    <nav id="menu">
     <h2>Clean Paws and All</h2>
     <ul>
         <li><a href='home.php'>Home</a></li>

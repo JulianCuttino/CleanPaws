@@ -24,7 +24,7 @@ $comments = $_POST['comments'];
 $sql_dog = "INSERT INTO dogs (ClientID,name,breed,age,weight,specialNeeds,comments) VALUES ('$client','$name','$breed','$age','$weight','$special','$comments')";
 $conn->query($sql_dog);
 $conn->close();
-echo($client);
+header('location:clients.php');
 
 
 
