@@ -1,6 +1,12 @@
 <!DOCTYPE html>
-<html>
-<link href='Style/style.css' rel='stylesheet' type='text/css' media='all'>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='Style/style.css' rel='stylesheet' type='text/css' media='all'>
+    <title>Login</title>
+</head>
+<body>
 <h2 class="center">Login</h2>
 <div class="wrapper">
 
@@ -16,10 +22,11 @@
 
     <label for='password'><b>Password</b></label>
     <input type='password'class="input" placeholder='Enter password' name='password' required>
-    <button type='submit'>Login</button>
+    <button class="btn" type='submit'>Login</button>
 </div>
     
  </div>
  </form>
 </div>
+</body>
 </html>

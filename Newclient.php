@@ -4,7 +4,7 @@
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <link href='Style/style.css' rel='stylesheet' type='text/css' media='all'>
-<title>Untitled 1</title>
+<title>Add New Client 1</title>
 </head>
 
 <body>
@@ -49,8 +49,8 @@
     <label for="comments"><b>Additional Comments</b></label>
     <input type="text" placeholder="Enter comments" name="comments" id="comments">
     
-    <button type="submit">Submit</button>
-    <button onclick="location.href='home.php'">Cancel</button>
+    <button class="btn" type="submit">Submit</button>
+    <button class="cancel" onclick="location.href='home.php'">Cancel</button>
     </div>
     
 </div>
