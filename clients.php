@@ -23,6 +23,7 @@ include_once 'header.php';
 	<th>Phone Number</th>
 	<th>Notes</th>
 	<th>Dog</th>
+	<th colspan="2">Action</th>
 	</tr>
 	<?php
 	include_once 'dbconnect.php';
