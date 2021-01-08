@@ -1,5 +1,4 @@
 <?php 
-include_once 'isConnected.php';
 include_once 'header.php';
 ?>
 <!DOCTYPE html>
@@ -32,7 +31,11 @@ include_once 'header.php';
 	if ($result->num_rows>0){
 				while ($row = $result-> fetch_assoc()){
 				  $User = $row['ClientID'];
-					echo"<tr><td>".$row['firstname']." ". $row['lastname']."</td><td>".$row['address']."</td><td>".$row['phone']."</td><td>".$row['notes']."</td><td><a href='dog.php?u=$User'>dog</a></td></tr>";
+				  echo"<tr><td>".$row['firstname']." ". $row['lastname']."</td><td>"
+				  .$row['address']."</td><td>".$row['phone']."</td><td>".$row['notes'].
+				  "</td><td><a href='dog.php?u=$User'>dog</a></td>".
+				  "<td><a href='edit.php?u=$User'><button class='btn'>Edit</button></a></td>".
+				  "<td><a href='delete.php?u=$User'><button class='cancel'>Delete</button></a></td></tr>";
 					}
 				echo "</table>";
 				}
