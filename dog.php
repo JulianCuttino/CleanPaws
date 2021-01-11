@@ -39,7 +39,7 @@ if(isset($_GET["u"])){
     if($result->num_rows>0){
         while ($row = $result-> fetch_assoc()){
             $User = $row['DogID'];
-            echo"<tr><td>".$row['name']." ". $row['breed']."</td><td>"
+            echo"<tr><td>".$row['name']."</td><td> ". $row['breed']."</td><td>"
             .$row['age']."</td><td>".$row['weight']."</td><td>".$row['specialNeeds'].
             "</td><td>".$row['comments']."</td>
             <td><a href='editDog.php?u=$User'><button class='btn'>Edit</button></a></td>".
