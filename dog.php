@@ -23,6 +23,7 @@ if(isset($_GET["u"])){
     <table>
     <thead>
     <tr>
+    <th>Name</th>
     <th>Breed</th>
     <th>Age</th>
     <th>Weight</th>

@@ -34,9 +34,10 @@ include_once 'header.php';
 				  $User = $row['ClientID'];
 				  echo"<tr><td>".$row['firstname']." ". $row['lastname']."</td><td>"
 				  .$row['address']."</td><td>".$row['phone']."</td><td>".$row['notes'].
-				  "</td><td><a href='dog.php?u=$User'>dog</a></td>".
-				  "<td><a href='edit.php?u=$User'><button class='btn'>Edit</button></a></td>".
-				  "<td><a href='delete.php?u=$User'><button class='cancel'>Delete</button></a></td></tr>";
+				  "</td><td><a href='dog.php?u=$User'>View Dogs</a></td>".
+				  "<td><a href='editClient.php?u=$User'><button class='btn'>Edit Client</button></a></td>".
+				  "<td><a href='delete.php?u=$User'><button class='cancel'>Delete</button></a></td>".
+				  "<td> <a href='newDog.php?u=$User'><button class='btn'>Add Dog</button></a></td></tr>";
 					}
 				echo "</table>";
 				}

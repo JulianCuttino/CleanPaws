@@ -46,7 +46,10 @@ if(isset($_GET['u'])){
      
     <label for="comments"><b>Additional Comments</b></label>
     <input type="text" value="<?php echo $comments;?>" placeholder="Enter comments" name="comments" id="comments">
+    <button class="btn" type="submit">Update</button>
+    <button class="cancel" onclick="location.href='index.php'">Cancel</button>
     </div>
+	
 
 
     </form>
