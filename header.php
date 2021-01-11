@@ -12,7 +12,7 @@
     <h2>Clean Paws and All</h2>
     <nav>
     <ul>
-        <li><a href='home.php'>Home</a></li>
+        <li><a href='index.php'>Home</a></li>
         <li><a href='clients.php'>Clients</a></li>
         <li><a href='finances.php'>Finance</a></li>
      	<li><?php echo $ret['Name'];?></li>

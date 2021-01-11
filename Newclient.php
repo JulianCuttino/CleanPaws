@@ -50,7 +50,7 @@
     <input type="text" placeholder="Enter comments" name="comments" id="comments">
     
     <button class="btn" type="submit">Submit</button>
-    <button class="cancel" onclick="location.href='home.php'">Cancel</button>
+    <button class="cancel" onclick="location.href='index.php'">Cancel</button>
     </div>
     
 </div>

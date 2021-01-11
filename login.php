@@ -19,12 +19,12 @@ include_once 'dbconnect.php';
        
        if (!isset($_SESSION['row'])) {
         $_SESSION['row'] = $row;
-        header('location:home.php');
+        header('location:index.php');
        }
        } else {
            echo"
            <script> alert('Incorrect email or password. Try again');
-           window.location='index.php';
+           window.location='loginpage.php';
            </script>";
         }
        $conn->close();

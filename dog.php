@@ -11,25 +11,14 @@
 if(isset($_GET["u"])){
 	$u = (int)$_GET["u"];
 } else {
-    header("location: home.php");
+    header("location: index.php");
     exit();	
 }
 ?>
 </div>
 <div>
-<?php
-include_once 'dbconnect.php';
-$sql = "SELECT * FROM dogs WHERE ClientID = '$u'";
-$result = $conn->query($sql);
-$dog = $result-> fetch_assoc();
-$name = $dog['name'];
-$breed = $dog['breed'];
-$weight = $dog['weight'];
-$age = $dog['age'];
-$special = $dog['specialNeeds'];
-$comments = $dog['comments'];
-?>
-<h1><?php echo($name);?> </h1>
+<h1>Dogs</h1>
+</div>
 <div>
     <table>
     <thead>
@@ -41,21 +30,37 @@ $comments = $dog['comments'];
     <th>Comments</th>
     </tr>
     </thead>
-    <tbody>
-    <tr>
-    <td><?php echo($breed);?></td>
-    <td><?php echo($age);?></td>
-    <td><?php echo($weight);?></td>
-    <td><?php echo($special);?></td>
-    <td><?php echo($comments);?></td>
-    </tr>
-    
-    </tbody>
+
+    <?php
+    include_once 'dbconnect.php';
+    $sql = "SELECT * FROM dogs WHERE ClientID = '$u'";
+    $result = $conn->query($sql);
+    if($result->num_rows>0){
+        while ($row = $result-> fetch_assoc()){
+            $User = $row['DogID'];
+            echo"<tr><td>".$row['name']." ". $row['breed']."</td><td>"
+            .$row['age']."</td><td>".$row['weight']."</td><td>".$row['specialNeeds'].
+            "</td><td>".$row['comments']."</td>
+            <td><a href='editDog.php?u=$User'><button class='btn'>Edit</button></a></td>".
+            "</tr>";
+              }
+          echo "</table>";
+          }
+      else{
+          echo "No results";
+          }
+      $conn->close();
+
+
+
+
+    }
+
+?>
     
     </table>
 
 
-</div>
 </div>
     
 </body>
