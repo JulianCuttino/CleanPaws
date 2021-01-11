@@ -52,10 +52,6 @@ if(isset($_GET["u"])){
       $conn->close();
 
 
-
-
-    }
-
 ?>
     
     </table>
