@@ -23,7 +23,7 @@ include_once 'header.php';
 	<th>Phone Number</th>
 	<th>Notes</th>
 	<th>Dog</th>
-	<th colspan="2">Action</th>
+	<th colspan="3">Action</th>
 	</tr>
 	<?php
 	include_once 'dbconnect.php';
@@ -36,8 +36,8 @@ include_once 'header.php';
 				  .$row['address']."</td><td>".$row['phone']."</td><td>".$row['notes'].
 				  "</td><td><a href='dog.php?u=$User'>View Dogs</a></td>".
 				  "<td><a href='editClient.php?u=$User'><button class='btn'>Edit Client</button></a></td>".
-				  "<td><a href='delete.php?u=$User'><button class='cancel'>Delete</button></a></td>".
-				  "<td> <a href='newDog.php?u=$User'><button class='btn'>Add Dog</button></a></td></tr>";
+				  "<td><a href='newDog.php?u=$User'><button class='btn'>Add a Dog</button></a></td>".
+				  "<td> <a href='delete.php?u=$User'><button class='cancel'>Delete</button></a></td></tr>";
 					}
 				echo "</table>";
 				}

@@ -49,13 +49,16 @@ $comments = $row2['comments'];
     
     <label for="notes"><b>Notes About Client</b></label>
     <input type="text" value="<?php echo $notes;?>" placeholder="Enter notes" name="notes" id="notes">
-      
-    <button class="btn" type="submit">Update</button>
+   	<div>
+   	<button class="btn" type="submit">Update</button>
     <button class="cancel" onclick="location.href='index.php'">Cancel</button>
+   	</div>   
+    
     </div>
    
-  
+  	
     </div>
+    
 </form>
 </div>
 
