@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 31, 2020 at 04:00 PM
+-- Generation Time: Jan 12, 2021 at 09:46 PM
 -- Server version: 8.0.18
 -- PHP Version: 7.3.11
 
@@ -34,13 +34,6 @@ CREATE TABLE `admins` (
   `Password` varchar(50) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `admins`
---
-
-INSERT INTO `admins` (`ID`, `Name`, `Password`) VALUES
-(1, 'Julian', 'Root');
-
 -- --------------------------------------------------------
 
 --
@@ -68,8 +61,8 @@ CREATE TABLE `dogs` (
   `name` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
   `breed` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
   `age` int(11) NOT NULL,
-  `weight` float NOT NULL,
-  `special needs` text COLLATE utf8mb4_general_ci NOT NULL,
+  `weight` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `specialNeeds` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `comments` text COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -103,7 +96,7 @@ ALTER TABLE `dogs`
 -- AUTO_INCREMENT for table `admins`
 --
 ALTER TABLE `admins`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `clients`
