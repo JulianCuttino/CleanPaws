@@ -4,7 +4,7 @@
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <link href='Style/style.css' rel='stylesheet' type='text/css' media='all'>
-<title>Add New Client 1</title>
+<title>Add New Client </title>
 </head>
 
 <body>
@@ -21,6 +21,10 @@
 	
     <label for="address"><b>Address</b></label>
     <input type="text" placeholder="Enter address" name="address" id="address" required>
+
+    <label for="email"><b>Email</b></label>
+    <input type="email" placeholder="Enter email" name="email" id="email" required>
+ 
  
     <label for="phone"><b>Phone Number </b></label>
     <input type="text" placeholder="Enter Phone number" name="phone" id="phone" required>

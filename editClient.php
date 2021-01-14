@@ -15,6 +15,7 @@ $row = $result->fetch_array();
 $first = $row['firstname'];
 $last = $row['lastname'];
 $address = $row['address'];
+$email = $row['email'];
 $phone = $row['phone'];
 $notes = $row['notes'];
 
@@ -43,6 +44,9 @@ $comments = $row2['comments'];
 	
     <label for="address"><b>Address</b></label>
     <input type="text" value="<?php echo $address;?>" placeholder="Enter address" name="address" id="address" required>
+
+    <label for="email"><b>Email</b></label>
+    <input type="email" value="<?php echo $email;?>" placeholder="Enter email" name="email" id="email" required>
  
     <label for="phone"><b>Phone Number </b></label>
     <input type="text" value="<?php echo $phone;?>" placeholder="Enter Phone number" name="phone" id="phone" required>

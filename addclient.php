@@ -3,10 +3,11 @@ include_once 'dbconnect.php';
 $firstName = $_POST["fname"];
 $lastName = $_POST["lname"];
 $address = $_POST['address'];
+$email = $_POST['email'];
 $phone = $_POST['phone'];
 $notes = $_POST['notes'];
 
-$sql = "INSERT INTO clients (firstname,lastname,address,phone,notes) VALUES('$firstName','$lastName','$address','$phone','$notes')";
+$sql = "INSERT INTO clients (firstname,lastname,address,email,phone,notes) VALUES('$firstName','$lastName','$address','$email',$phone','$notes')";
 $conn->query($sql);
 
 
