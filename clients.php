@@ -32,12 +32,7 @@ include_once 'header.php';
 	if ($result->num_rows>0){
 				while ($row = $result-> fetch_assoc()){
 				  $User = $row['ClientID'];
-				  echo"<tr><td><a href='profile.php?id=$User'>".$row['firstname']." ". $row['lastname']."</a></td><td>"
-				  .$row['address']."</td><td>".$row['phone']."</td><td>".$row['notes'].
-				  "</td><td><a href='dog.php?u=$User'>View Dogs</a></td>".
-				  "<td><a href='editClient.php?u=$User'><button class='btn'>Edit Client</button></a></td>".
-				  "<td><a href='newDog.php?u=$User'><button class='btn'>Add a Dog</button></a></td>".
-				  "<td> <a href='delete.php?u=$User'><button class='cancel'>Delete</button></a></td></tr>";
+				  echo"<tr><td><a href='profile.php?id=$User'>".$row['firstname']." ". $row['lastname']."</a></td><td></tr>";
 					}
 				echo "</table>";
 				}
