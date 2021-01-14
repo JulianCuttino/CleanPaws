@@ -22,7 +22,7 @@ $notes = $row['notes'];
 <div>
 <h1><?php echo"$first"; echo" "; echo"$last";?></h1>
 <div>
-<a href='editClient.php?u=$User'><button class='btn'>Edit Client</button></a>
+<a href='editClient.php?u=$id'><button class='btn'>Edit Client</button></a>
 <a href='newDog.php?u=$id'><button class='btn'>Add a Dog</button></a>
 <a href='delete.php?u=$id'><button class='cancel'>Delete</button></a>
 </div>
