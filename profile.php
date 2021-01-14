@@ -27,13 +27,34 @@ $notes = $row['notes'];
 <a href='delete.php?u=$id'><button class='cancel'>Delete</button></a>
 </div>
 <br>
-<h3> Address: <?php echo"$address";?> </h3>
+<h3> Address:</h3>
+<p> <?php echo"$address";?></p>
 <br>
-<h3> Email: <?php echo"$email";?> </h3>
+<h3> Email:</h3>
+<p> <?php echo"$email";?></p>
 <br>
-<h3> Phone Number: <?php echo"$phone";?> </h3>
+<h3> Phone Number:</h3>
+<p><?php echo"$phone";?></p>
 <br>
-<h3> Notes on Client: <?php echo"$notes";?> </h3>
+<h3> Notes on Client:</h3>
+<p><?php echo"$notes";?></p>
+<div>
+<?php
+$sql = "SELECT * FROM dogs WHERE ClientID = '$id'";
+$result = $conn->query($sql);
+if($result->num_rows>0){
+    while ($row = $result-> fetch_assoc()){
+        $dogID=$row['DogID'];
+        echo"<div><h1>".$row['name']."</h1> <div> <a href='editDog.php?u=$dogID'><button class='btn'>Edit</button></a></div>"
+            ."<br><h3>Breed:</h3><p>".$row['breed']."</p>"
+            ."<br><h3>Age:</h3><p>".$row['age']."</p>"
+            ."<br><h3>Weight:</h3><p>".$row['weight']."</p>"
+            ."<br><h3>Special Needs:</h3><p>".$row['specialNeeds']."</p>"
+            ."<br><h3>Additional Comments:</h3><p>".$row['comments']."</p></div>";
+          }
+        }
+?>
+</div>
 
 </div>
 
