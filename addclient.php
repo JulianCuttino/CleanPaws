@@ -7,7 +7,7 @@ $email = $_POST['email'];
 $phone = $_POST['phone'];
 $notes = $_POST['notes'];
 
-$sql = "INSERT INTO clients (firstname,lastname,address,email,phone,notes) VALUES('$firstName','$lastName','$address','$email',$phone','$notes')";
+$sql = "INSERT INTO clients (firstname,lastname,address,email,phone,notes) VALUES('$firstName','$lastName','$address','$email', '$phone','$notes')";
 $conn->query($sql);
 
 
@@ -25,7 +25,9 @@ $comments = $_POST['comments'];
 $sql_dog = "INSERT INTO dogs (ClientID,name,breed,age,weight,specialNeeds,comments) VALUES ('$client','$name','$breed','$age','$weight','$special','$comments')";
 $conn->query($sql_dog);
 $conn->close();
-header('location:clients.php');
+echo "<script> alert('Client added successfully');
+ window.location = 'clients.php';
+ </script>";
 
 
 
